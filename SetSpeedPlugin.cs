@@ -26,6 +26,13 @@ namespace DrakiaXYZ.SetSpeed
         {
             Settings.Init(Config);
             _CurrentManagedStateGetter = AccessTools.PropertyGetter(typeof(Player), "CurrentManagedState");
+
+            // Support 3.5.8 and earlier
+            if (_CurrentManagedStateGetter == null)
+            {
+                _CurrentManagedStateGetter = AccessTools.PropertyGetter(typeof(Player), "CurrentState");
+            }
+
             _MovementStateType = _CurrentManagedStateGetter.ReturnType;
 
             _MovementContextField = AccessTools.Field(_MovementStateType, "MovementContext");
