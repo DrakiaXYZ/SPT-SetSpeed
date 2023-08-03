@@ -55,7 +55,7 @@ namespace DrakiaXYZ.SetSpeed
             Speed1 = Config.Bind(
                 SpeedsSectionTitle,
                 "Speed 1",
-                1,
+                0,
                 new ConfigDescription(
                     "The speed that Speed Key 1 sets movement to",
                     new AcceptableValueRange<int>(0, 100)
@@ -64,7 +64,7 @@ namespace DrakiaXYZ.SetSpeed
             Speed2 = Config.Bind(
                 SpeedsSectionTitle,
                 "Speed 2",
-                1,
+                25,
                 new ConfigDescription(
                     "The speed that Speed Key 2 sets movement to",
                     new AcceptableValueRange<int>(0, 100)
@@ -73,7 +73,7 @@ namespace DrakiaXYZ.SetSpeed
             Speed3 = Config.Bind(
                 SpeedsSectionTitle,
                 "Speed 3",
-                1,
+                50,
                 new ConfigDescription(
                     "The speed that Speed Key 3 sets movement to",
                     new AcceptableValueRange<int>(0, 100)
@@ -82,7 +82,7 @@ namespace DrakiaXYZ.SetSpeed
             Speed4 = Config.Bind(
                 SpeedsSectionTitle,
                 "Speed 4",
-                1,
+                75,
                 new ConfigDescription(
                     "The speed that Speed Key 4 sets movement to",
                     new AcceptableValueRange<int>(0, 100)
@@ -91,7 +91,7 @@ namespace DrakiaXYZ.SetSpeed
             Speed5 = Config.Bind(
                 SpeedsSectionTitle,
                 "Speed 5",
-                1,
+                100,
                 new ConfigDescription(
                     "The speed that Speed Key 5 sets movement to",
                     new AcceptableValueRange<int>(0, 100)
