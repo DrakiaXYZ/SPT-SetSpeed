@@ -9,7 +9,8 @@ using UnityEngine;
 
 namespace DrakiaXYZ.SetSpeed
 {
-    [BepInPlugin("xyz.drakia.setspeed", "DrakiaXYZ-SetSpeed", "1.0.0")]
+    [BepInPlugin("xyz.drakia.setspeed", "DrakiaXYZ-SetSpeed", "1.1.0")]
+    [BepInDependency("com.SPT.core", "3.9.0")]
     public class SetSpeedPlugin : BaseUnityPlugin
     {
         Type _MovementStateType;
