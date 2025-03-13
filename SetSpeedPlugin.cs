@@ -9,8 +9,8 @@ using UnityEngine;
 
 namespace DrakiaXYZ.SetSpeed
 {
-    [BepInPlugin("xyz.drakia.setspeed", "DrakiaXYZ-SetSpeed", "1.2.0")]
-    [BepInDependency("com.SPT.core", "3.10.0")]
+    [BepInPlugin("xyz.drakia.setspeed", "DrakiaXYZ-SetSpeed", "1.3.0")]
+    [BepInDependency("com.SPT.core", "3.11.0")]
     public class SetSpeedPlugin : BaseUnityPlugin
     {
         Type _MovementStateType;
@@ -27,12 +27,6 @@ namespace DrakiaXYZ.SetSpeed
         {
             Settings.Init(Config);
             _CurrentManagedStateGetter = AccessTools.PropertyGetter(typeof(Player), "CurrentManagedState");
-
-            // Support 3.5.8 and earlier
-            if (_CurrentManagedStateGetter == null)
-            {
-                _CurrentManagedStateGetter = AccessTools.PropertyGetter(typeof(Player), "CurrentState");
-            }
 
             _MovementStateType = _CurrentManagedStateGetter.ReturnType;
 
